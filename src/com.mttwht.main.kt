@@ -7,6 +7,11 @@ fun main(args: Array<String>) {
 class Question {
     var Answer:String = ""
     val Question:String = "What is the meaning of life?"
+
+    fun display() {
+//        println("Your answer is " + Answer)
+        println("Your answer is $Answer")
+    }
 }
 
 fun Immutability() {
@@ -21,5 +26,6 @@ fun Immutability() {
 //    r.Question = "" // Not allowed!
 
     println(q.Question)
-    println(r.Answer)
+    r.display()
+    println("The answer is ${r.Answer}")
 }
