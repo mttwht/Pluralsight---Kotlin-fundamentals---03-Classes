@@ -13,6 +13,13 @@ class Question {
 //        println("Your answer is " + Answer)
         println("Your answer is $Answer")
     }
+
+    fun printResult() {
+        when (Answer) {
+            CorrectAnswer -> println("Answer is correct!")
+            else -> println("Try again")
+        }
+    }
 }
 
 fun doThings() {
@@ -30,10 +37,5 @@ fun doThings() {
     r?.display()
     println("The answer is ${r?.Answer}")
 
-    var message = if(r?.Answer == r?.CorrectAnswer) {
-        "Answer is correct!"
-    } else {
-        "Try again"
-    }
-    println(message)
+    r?.printResult()
 }
