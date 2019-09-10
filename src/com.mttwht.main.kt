@@ -1,9 +1,36 @@
 import java.lang.NumberFormatException
+import java.util.*
 
 fun main(args: Array<String>) {
     println("Hello, World!")
 
     doThings()
+
+    println()
+
+    looping()
+}
+
+fun looping() {
+//    for(i in 1..10) // prints 1,2,3,4,5,6,7,8,9,10
+//    for(i in 1..10 step 2) // prints 1,3,5,7,9
+//    for(i in 10 downTo 1) // prints 10,8,6,4,2
+    for(i in 1 until 10) // prints 1,2,3,4,5,6,7,8,9
+        println(i)
+
+    var numbers = listOf(1,2,3,4,5)
+    for(i in numbers) // prints 1,2,3,4,5
+        println(i)
+
+    var ages = TreeMap<String, Int>()
+    ages["Matt"] = 33
+    ages["Claire"] = 34
+    ages["Baby"] = 0
+    for((name, age) in ages)
+        println("$name is $age years old")
+
+    for((index, element) in numbers.withIndex())
+        println("numbers[$index] = $element")
 }
 
 class Question {
