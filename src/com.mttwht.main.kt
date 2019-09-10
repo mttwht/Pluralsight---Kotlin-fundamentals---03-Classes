@@ -1,3 +1,5 @@
+import java.lang.NumberFormatException
+
 fun main(args: Array<String>) {
     println("Hello, World!")
 
@@ -20,6 +22,15 @@ class Question {
             else -> println("Try again")
         }
     }
+
+    fun printNumber() {
+        var number:Int? = try {
+            Integer.parseInt(Answer)
+        } catch(e:NumberFormatException) {
+            null
+        }
+        println("Number value is $number")
+    }
 }
 
 fun doThings() {
@@ -38,4 +49,6 @@ fun doThings() {
     println("The answer is ${r?.Answer}")
 
     r?.printResult()
+
+    r?.printNumber()
 }
