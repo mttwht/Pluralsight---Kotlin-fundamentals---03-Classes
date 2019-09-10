@@ -6,6 +6,7 @@ fun main(args: Array<String>) {
 
 class Question {
     var Answer:String = ""
+    val CorrectAnswer = "42"
     val Question:String = "What is the meaning of life?"
 
     fun display() {
@@ -28,4 +29,11 @@ fun Immutability() {
     println(q.Question)
     r.display()
     println("The answer is ${r.Answer}")
+
+    var message = if(r.Answer == r.CorrectAnswer) {
+        "Answer is correct!"
+    } else {
+        "Try again"
+    }
+    println(message)
 }
